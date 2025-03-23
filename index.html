@@ -54,6 +54,12 @@
         justify-content: center;
         align-items: center;
     }
+    .abt-section .container .row .col .para{
+        border: 2px solid #dc3545;
+        color: rgb(252, 246, 244);
+        padding: 1rem;
+        backdrop-filter: blur(4px);
+    }  
 
     #card {
         border: 5px;
@@ -124,6 +130,112 @@
     .nav-link:hover::before {
         width: 70%;
     }
+    
+
+    @media (min-width: 0px) and (max-width: 768px) {
+        .hero-section .container .row{
+            flex-direction: column;
+        }
+        .hero-section .container .row .order-1{
+            order: 2 !important;
+        }
+        .hero-section .container .row .order-2{
+            order: 1 !important;
+        }
+        .hero-section .container .row .col .img-box{
+            width: 220px !important;
+        }
+        .hero-section .container .row .col .row{
+            flex-direction: row;
+            justify-content: center;
+        }
+        .abt-section{
+            margin-top: 30%;
+        }
+        .abt-section .container .row{
+            flex-direction: column;
+        }
+        .abt-section .container .row .col .about-img{
+            width: 250px !important;
+            height: 200px !important;
+        }
+        .abt-section .container .row .col .para{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .abt-section .container .row .avatar{
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            bottom: -32%;
+        }
+        @media (min-height: 1099px) and (max-height: 1199.98px){
+        .abt-section .container .row .avatar{
+            bottom: -35%;
+        }
+        }
+        @media (min-height: 1099px) and (max-height: 1199.98px){
+        .abt-section .container .row .avatar{
+            bottom: -35%;
+        }
+        }
+        @media (min-height: 992px) and (max-height: 1098.98px){
+        .abt-section .container .row .avatar{
+            bottom: -45%;
+        }
+        }
+        @media (min-height: 860px) and (max-height: 991.98px){
+        .abt-section .container .row .avatar{
+            bottom: -65%;
+        }
+        }
+        @media (min-height: 768px) and (max-height: 859.98px){
+        .abt-section .container .row .avatar{
+            bottom: -72%;
+        }
+        }
+        @media (min-height: 678px) and (max-height: 767.98px){
+        .abt-section .container .row .avatar{
+            bottom: -100%;
+        }
+        }
+        @media (min-height: 568px) and (max-height: 677.98px){
+        .abt-section .container .row .avatar{
+            bottom: -126%;
+        }
+        }
+        @media (min-height: 480px) and (max-height: 567.98px){
+        .abt-section .container .row .avatar{
+            bottom: -170%;
+        }
+        .abt-section .container .row .col img{
+            width: 350px !important;
+            height: 280px !important;
+        }
+        }
+        @media (min-height: 350px) and (max-height: 479.98px){
+        .abt-section .container .row .avatar{
+            bottom: -230%;
+        }
+        .abt-section .container .row .col img{
+            width: 250px !important;
+            height: 250px !important;
+        }
+        }
+        @media (min-height: 0px) and (max-height: 349.98px){
+        .abt-section .container .row .avatar{
+            bottom: -350%;
+        }
+        .abt-section .container .row .col img{
+            width: 200px !important;
+            height: 200px !important;
+        }
+        }
+        .project .container .row .px-5{
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+    }
 </style>
 
 <body>
@@ -170,14 +282,14 @@
     <section class="hero-section text-light" id="home" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col ">
-                    <div class="col-md-9 order-2 order-md-1 text-center text-md-start m-4">
+                <div class="col order-1">
+                    <div class="col-md-9 text-center text-md-start m-4">
                         <h3 class="text-danger mt-3 fw-bold display-7">Hello, I am</h3>
                         <h3 class="text-white mt-3 fw-bold display-6">Suresh</h3>
                         <h3 class="text-white mt-3 fw-bold display-7 ">
-                            <span class="auto mt-3 text-light" style="font-family: 'JetBrains Mono', monospace;"></span>
+                            Python Developer
                         </h3>
-                        <p class="into-text mt-3 fs-5">I specialized in Mysql, Python, HTML, CSS and framworks like
+                        <p class="into-text mt-3  fs-5">I specialized in Mysql, Python, HTML, CSS and framworks like
                             Django,
                             Flask and Bootstrap.</p>
                         <div class="row justify-content-center jsutify-content-md-start">
@@ -200,8 +312,8 @@
                             <i class="fa-duotone fa-solid fa-download"></i></a>
                     </div>
                 </div>
-                <div class="col ">
-                    <div class="col-md-3 text-center order-1 order-md-2 mt-4 mt-md-0b ms-auto"
+                <div class="col order-2 d-flex justify-content-center ">
+                    <div class="col-md-3 text-center  mt-4 mt-md-0b "
                         style="width: 320px;justify-content: center; align-items: center; ">
                         <img src="./assert/profile.jpg" alt="profile pic" class="profile-img img-fluid  shadow-lg"
                             style="filter: drop-shadow(10px 10px 10px #dc3545);">
@@ -217,7 +329,7 @@
         <div class="container" id="about">
             <div class="row ">
 
-                <div class="col">
+                <div class="col avatar">
                     <div class="text-center mt-3 mb-5">
                         <img src="./assert/about-removebg.png" class="img-fluid rounded-pill shadow-lg " alt="about img"
                             style="height: 450px; width: 300px; justify-content: center;
@@ -238,11 +350,11 @@
                             🎯 My goal is to become a Senior Software Developer, continuously enhancing my technical
                             expertise and contributing to innovative solutions.
                             <br><br>
-
+                           
                             ☕ Beyond tech, I aspire to start my own tea or juice franchise, blending my passion for
                             software with entrepreneurship.
                             <br>
-
+                           
                             🚀 Currently, I am seeking a Junior Python Developer role in Chennai to grow my skills and
                             work toward my long-term goals.
                         </p>
@@ -537,7 +649,7 @@
 
     <section class="footer">
         <div class="card1 bg-dark footer-dark mt-5" id="footer">
-            <div class="row">
+            <div class="row gx-0">
                 <div class="row justify-content-center justify-content-md-center mt-3">
                     <div class="col-auto social-icons py-3">
                         <a href="https://www.linkedin.com/in/sureshk06/"><img src="./assert/linkedin_icon.png"
